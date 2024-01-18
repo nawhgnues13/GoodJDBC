@@ -26,6 +26,7 @@ public class JDBCTemplate {
 		if (conn == null || conn.isClosed()) {
 			Class.forName(DRIVER_NAME);
 			conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+			conn.setAutoCommit(false);
 		}
 		return conn;
 	}
