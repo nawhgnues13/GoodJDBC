@@ -31,18 +31,18 @@ public class MemberController {
 	// 회원 정보 수정
 	public int modifyMember(Member member) {
 		int result = mService.updateMember(member);
-		return 0;
+		return result;
 	}
 
 	// 회원 정보 삭제
 	public int removeMember(String memberId) {
 		int result = mService.deleteMember(memberId);
-		return 0;
+		return result;
 	}
 
 	public int checkLoginInfo(Member member) {
 		int result = mService.selectLoginInfo(member);
-		return 0;
+		return result;
 	}
 
 }
